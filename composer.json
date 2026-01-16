@@ -1,0 +1,16 @@
+{
+    "name": "rrcatering/app",
+    "description": "R&R Catering booking system",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Tafadzwa Kamanga",
+            "email": "tkamanga011@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "phpmailer/phpmailer": "^7.0"
+    }
+}
