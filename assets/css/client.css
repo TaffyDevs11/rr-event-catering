@@ -1,0 +1,396 @@
+/* =========================================================
+   client.css — Fully Responsive Client-Facing Styles
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+/* Reset & base */
+* { 
+  margin:0; 
+  padding:0; 
+  box-sizing:border-box; 
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background:#f9f9f9;
+  color:#333;
+  line-height:1.6;
+}
+
+h1, h2, h3,
+.wizard-header h1,
+.step-title,
+.visual-text h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+a { 
+  text-decoration:none; 
+  color:inherit; 
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.client-nav,
+.client-nav a,
+.btn {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.client-nav { 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  background:#1e1e1e; 
+  color:#fff; 
+  padding:15px 30px; 
+  flex-wrap:wrap; 
+}
+
+.client-nav .nav-left a, 
+.client-nav .nav-right a { 
+  margin-right:15px; 
+  color:#fff; 
+  font-weight:500; 
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+}
+
+.client-nav .nav-logo { 
+  font-size:20px; 
+  font-weight:700; 
+  color:#FFD700; 
+  margin-right:30px; 
+}
+
+.client-nav .nav-user { 
+  margin-right:10px; 
+  font-weight:600; 
+}
+
+/* Buttons */
+.btn { 
+  padding:10px 18px; 
+  border-radius:6px; 
+  font-weight:500; 
+  transition:0.2s; 
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.btn:hover { opacity:0.85; }
+
+.btn-login, 
+.btn-register { 
+  background:#FFD700; 
+  color:#000; 
+}
+
+.btn-logout { 
+  background:#e74c3c; 
+  color:#fff; 
+}
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container { 
+  max-width:1200px; 
+  margin:20px auto; 
+  padding:0 15px; 
+}
+
+/* =========================================================
+   BOOKING WIZARD
+   ========================================================= */
+
+.booking-page { 
+  display:flex; 
+  flex-wrap:wrap; 
+  gap:30px; 
+}
+
+.wizard-wrap { 
+  flex:2; 
+  background:#fff; 
+  padding:25px; 
+  border-radius:12px; 
+  box-shadow:0 5px 20px rgba(0,0,0,0.1); 
+}
+
+.wizard-card header { 
+  margin-bottom:20px; 
+}
+
+.wizard-header h1 { 
+  font-size:24px; 
+  color:#1e1e1e; 
+  margin-bottom:5px; 
+}
+
+.wizard-header .muted { 
+  color:#666; 
+  font-size:14px; 
+}
+
+/* Steps */
+.step { display:none; }
+
+.step.active { display:block; }
+
+.step-title { 
+  font-size:18px; 
+  font-weight:600; 
+  margin-bottom:15px; 
+}
+
+.field { 
+  margin-bottom:15px; 
+  display:block; 
+}
+
+.field input, 
+.field textarea { 
+  width:100%; 
+  padding:12px; 
+  border-radius:6px; 
+  border:1px solid #ccc; 
+  font-size:14px; 
+  min-height:44px;
+}
+
+.grid-2 { 
+  display:flex; 
+  gap:15px; 
+  flex-wrap:wrap; 
+}
+
+.grid-2 .field { 
+  flex:1; 
+}
+
+/* Buttons in wizard */
+.step-actions { 
+  margin-top:20px; 
+  display:flex; 
+  gap:10px; 
+  flex-wrap:wrap;
+}
+
+.btn-gold { 
+  background:#FFD700; 
+  color:#000; 
+}
+
+.btn-ghost { 
+  background:#eee; 
+  color:#333; 
+}
+
+/* =========================================================
+   MENU SELECTION
+   ========================================================= */
+
+.menu-section { 
+  margin-bottom:25px; 
+}
+
+.menu-header { 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  margin-bottom:10px; 
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.menu-header .hint { 
+  font-size:14px; 
+  color:#666; 
+}
+
+.menu-grid { 
+  display:grid; 
+  grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); 
+  gap:10px; 
+}
+
+.menu-item { 
+  display:block; 
+  padding:12px; 
+  border:1px solid #ccc; 
+  border-radius:6px; 
+  cursor:pointer; 
+  transition:0.2s; 
+  min-height:44px;
+}
+
+.menu-item input { display:none; }
+
+.menu-item .mi-top { 
+  display:flex; 
+  justify-content:space-between; 
+  font-size:14px; 
+  font-weight:500; 
+}
+
+.menu-item:hover { 
+  background:#fdf2d6; 
+  border-color:#FFD700; 
+}
+
+/* =========================================================
+   REVIEW BOX
+   ========================================================= */
+
+.review-box { 
+  background:#f7f7f7; 
+  padding:15px; 
+  border-radius:6px; 
+}
+
+.review-row { 
+  margin-bottom:8px; 
+}
+
+.review-row.grand { 
+  font-weight:700; 
+  font-size:16px; 
+}
+
+/* =========================================================
+   WIZARD VISUAL (ASIDE)
+   ========================================================= */
+
+.wizard-visual { 
+  flex:1; 
+  max-width:350px; 
+}
+
+.visual-card { 
+  background:#fff; 
+  border-radius:12px; 
+  overflow:hidden; 
+  box-shadow:0 5px 15px rgba(0,0,0,0.1); 
+}
+
+.visual-card img { 
+  width:100%; 
+  display:block; 
+}
+
+.visual-text { padding:15px; }
+
+.visual-text h3 { 
+  font-size:16px; 
+  font-weight:600; 
+  margin-bottom:5px; 
+}
+
+.price-note { 
+  margin-top:10px; 
+  font-weight:600; 
+  color:#333; 
+}
+
+/* =========================================================
+   PROGRESS BAR
+   ========================================================= */
+
+.progress-bar { 
+  height:5px; 
+  background:#eee; 
+  border-radius:3px; 
+  margin-bottom:20px; 
+  overflow:hidden; 
+}
+
+.progress-fill { 
+  height:100%; 
+  background:#FFD700; 
+  width:0%; 
+  transition:width 0.3s ease; 
+}
+
+/* =========================================================
+   RESPONSIVE ENHANCEMENTS
+   ========================================================= */
+
+/* TABLET (≤ 768px) */
+@media(max-width:768px){ 
+
+    .client-nav {
+      padding:15px 20px;
+      gap:10px;
+    }
+
+    .booking-page { 
+      flex-direction:column; 
+    }
+
+    .wizard-visual { 
+      max-width:100%; 
+    }
+
+    .grid-2 { 
+      flex-direction:column; 
+    }
+
+    .step-actions {
+      justify-content:flex-start;
+    }
+}
+
+/* MOBILE (≤ 480px) */
+@media(max-width:480px){
+
+    .client-nav {
+      flex-direction:column;
+      align-items:flex-start;
+    }
+
+    .client-nav .nav-left,
+    .client-nav .nav-right {
+      width:100%;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:8px;
+    }
+
+    .client-nav .nav-left a,
+    .client-nav .nav-right a {
+      margin-right:0;
+    }
+
+    .wizard-wrap {
+      padding:20px;
+    }
+
+    .wizard-header h1 {
+      font-size:20px;
+    }
+
+    .step-title {
+      font-size:16px;
+    }
+
+    .menu-grid {
+      grid-template-columns:1fr;
+    }
+
+    .step-actions {
+      flex-direction:column;
+    }
+
+    .btn {
+      width:100%;
+    }
+}
